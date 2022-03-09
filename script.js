@@ -3,11 +3,17 @@ const goLogin = document.getElementById("login");
 goLogin.addEventListener("click", function () {
     let dbMail = ["mail1@email.com", "mail2@email.com", "mail3@email.com", "mail4@email.com"];
     let login = prompt("Inserisci la tua email per accedere");
-    let message;
+    let access;
     for (let i = 0; i < dbMail.length; i++) {
         if (dbMail[i] == login) {
-            alert("Accesso consentito");
+            access = true;
         }
+    }
+    if (access == true) {
+        alert("Accesso consentito");
+    }
+    else {
+        alert("Accesso non consentito");
     }
 })
 

@@ -17,13 +17,18 @@ const goGame = document.getElementById("game");
 
 goGame.addEventListener("click", function () {
 
-    let user = Math.floor(Math.random() * 6);
-    let cpu = Math.floor(Math.random() * 6);
+    let user = Math.floor((Math.random() * 6) + 1);
+    let cpu = Math.floor((Math.random() * 6) + 1);
     if (user > cpu) {
         alert("Utente ha vinto");
+    }
+    else if (user == cpu) {
+        alert("Pareggio");
     }
     else {
         alert("Computer ha vinto");
     }
+
+    console.log("N Utente: ", user, "N Computer: ", cpu);
 
 })

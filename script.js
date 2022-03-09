@@ -1,12 +1,14 @@
 const goLogin = document.getElementById("login");
 
 goLogin.addEventListener("click", function () {
+
     let dbMail = ["mail1@email.com", "mail2@email.com", "mail3@email.com", "mail4@email.com"];
     let login = prompt("Inserisci la tua email per accedere");
     let access;
     for (let i = 0; i < dbMail.length; i++) {
         if (dbMail[i] == login) {
             access = true;
+            break;
         }
     }
     if (access == true) {
